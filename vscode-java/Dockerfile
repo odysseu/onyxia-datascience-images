@@ -13,7 +13,12 @@ USER root
 
 RUN apt-get update && \
     # Install JDK
-    /opt/install-java.sh
+    /opt/install-java.sh && \
+    apt-get install maven
+
+RUN code-server --install-extension adamraichu.zip-viewer && \
+    code-server --install-extension redhat.java && \
+    code-server --install-extension vscjava.vscode-java-pack
 
 USER 1000
 
