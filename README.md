@@ -2,4 +2,4 @@
 
 Custom docker images to use in Onyxia
 
-- vscode with python and java
+- [vscode with python and java](https://hub.docker.com/r/odysseu/onyxia-vscode-java/tags)
