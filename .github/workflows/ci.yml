@@ -34,13 +34,11 @@ jobs:
       -
         name: Build & Push to DockerHub
         uses: docker/build-push-action@v5
-        env:
-          BASE_IMAGE: ${{ matrix.base-image }}
-          JAVA_VERSION: ${{ matrix.tag }}
         with:
           context: .
           file: ${{ matrix.dockerfile }}
           push: true
           tags: ${{ matrix.arrival-image }}:j${{ matrix.tag }}
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          build-args: |
+            BASE_IMAGE=${{ matrix.base-image }}
+            JAVA_VERSION=${{ matrix.tag }}
