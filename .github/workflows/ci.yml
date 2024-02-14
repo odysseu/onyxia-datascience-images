@@ -13,11 +13,9 @@ jobs:
       matrix:
         tag: [21, 17]
         include:
-          - base-image: inseefrlab/onyxia-vscode-python
-            arrival-image: odysseu/onyxia-vscode-java
+          - base-image: inseefrlab/onyxia-vscode-python:py3.11.6
+            destination-image: odysseu/onyxia-vscode-java
             dockerfile: vscode-java/Dockerfile
-          # - image: user/app2
-          #   dockerfile: your-docker-registry/app1
     steps:
       -
         name: Checkout
@@ -38,7 +36,7 @@ jobs:
           context: .
           file: ${{ matrix.dockerfile }}
           push: true
-          tags: ${{ matrix.arrival-image }}:j${{ matrix.tag }}
+          tags: ${{ matrix.destination-image }}:j${{ matrix.tag }}
           build-args: |
             BASE_IMAGE=${{ matrix.base-image }}
             JAVA_VERSION=${{ matrix.tag }}
