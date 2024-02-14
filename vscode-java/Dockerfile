@@ -14,7 +14,7 @@ USER root
 RUN apt-get update && \
     # Install JDK
     /opt/install-java.sh && \
-    apt-get install maven
+    apt-get install maven -y
 
 RUN code-server --install-extension adamraichu.zip-viewer && \
     code-server --install-extension redhat.java && \
