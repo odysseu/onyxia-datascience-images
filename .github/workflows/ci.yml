@@ -41,3 +41,5 @@ jobs:
           build-arg: |
             "BASE_IMAGE=${{ matrix.base-image }}"
             "JAVA_VERSION=${{ matrix.tag }}"
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
