@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        tag: [17, 21]
+        tag: [21, 17]
         include:
           - base-image: inseefrlab/onyxia-vscode-python
             arrival-image: odysseu/onyxia-vscode-java
