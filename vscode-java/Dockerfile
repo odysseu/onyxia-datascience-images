@@ -18,7 +18,8 @@ RUN apt-get update && \
 
 RUN code-server --install-extension adamraichu.zip-viewer && \
     code-server --install-extension redhat.java && \
-    code-server --install-extension vscjava.vscode-java-pack
+    code-server --install-extension vscjava.vscode-java-pack && \
+    code-server --install-extension bierner.markdown-mermaid
 
 USER 1000
 
