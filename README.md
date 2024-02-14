@@ -2,16 +2,17 @@
 
 Custom docker images to use in Onyxia
 
-## Link for docker image
-- [vscode with python and java](https://hub.docker.com/r/odysseu/onyxia-vscode-java/tags)
+## Link for docker images
 
-## 
+[Dockerhub > vscode Images with python and java](https://hub.docker.com/r/odysseu/onyxia-vscode-java/tags)
+
+## scheme for what's building
 
 ```mermaid
-flowchart TD
-A[image VSC \nde base]
-B[image VSC \ncomplète 17]
-C[image VSC \ncomplète 21]
-A -->|install Java 17\n installMaven| B
-A -->|install Java 21\n installMaven| C
+flowchart LR
+A[VSC \nde base]
+B[VSC avec\njava 17]
+C[VSC avec\njava 21]
+A -->|install Java 17\n install Maven| B
+A -->|install Java 21\n install Maven| C
 ```

@@ -14,12 +14,17 @@ USER root
 RUN apt-get update && \
     # Install JDK
     /opt/install-java.sh && \
+    # Install Maven
     apt-get install maven -y
+
+RUN java --version
+RUN mvn --version
 
 RUN code-server --install-extension adamraichu.zip-viewer && \
     code-server --install-extension redhat.java && \
     code-server --install-extension vscjava.vscode-java-pack && \
     code-server --install-extension bierner.markdown-mermaid
+
 
 USER 1000
 
