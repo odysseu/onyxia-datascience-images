@@ -11,10 +11,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        tag: [17, 21]
         include:
           - base-image: inseefrlab/onyxia-vscode-python
             dockerfile: vscode-java/Dockerfile
-            tag: [17, 21]
           # - image: user/app2
           #   dockerfile: your-docker-registry/app1
     steps:
