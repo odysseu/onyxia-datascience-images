@@ -13,7 +13,7 @@ jobs:
       matrix:
         tag: [21, 17]
         include:
-          - base-image: inseefrlab/onyxia-vscode-python:py3.11.6
+          - base-image: inseefrlab/onyxia-vscode-python:py3.13.5
             destination-image: odysseu/onyxia-vscode-java
             dockerfile: vscode-java/Dockerfile
     steps:

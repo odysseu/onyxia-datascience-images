@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=inseefrlab/onyxia-vscode-python:py3.11.6
+ARG BASE_IMAGE=inseefrlab/onyxia-vscode-python:py3.13.5
 FROM $BASE_IMAGE
 
 LABEL maintainer="odysseu <uboucherie1@gmail.com>"
