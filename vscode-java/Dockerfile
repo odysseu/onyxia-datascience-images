@@ -11,6 +11,10 @@ ENV PATH="${JAVA_HOME}/bin:${PATH}"
 
 USER root
 
+COPY vscode-java/install-java.sh /opt/install-java.sh
+
+RUN chmod +x /opt/install-java.sh
+
 RUN apt-get update && \
     # Install JDK
     /opt/install-java.sh && \
@@ -24,7 +28,6 @@ RUN code-server --install-extension adamraichu.zip-viewer && \
     code-server --install-extension redhat.java && \
     code-server --install-extension vscjava.vscode-java-pack && \
     code-server --install-extension bierner.markdown-mermaid
-
 
 USER 1000
 
